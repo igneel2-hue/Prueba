@@ -69,10 +69,10 @@ cp .env.example .env.local
 ```
 
 ```dotenv
-VITE_SUPABASE_URL=https://vparxfmoqfaahsdqmjcf.supabase.co
+VITE_SUPABASE_URL=https://dxutsrqmnyrydpdtghlw.supabase.co
 VITE_SUPABASE_ANON_KEY=sb_publishable_...
 VITE_TURNSTILE_SITE_KEY=0x...
-VITE_BASE_PATH=          # vacío en local; en Pages: /inventarios/RCP_Veterinaria/
+VITE_BASE_PATH=          # vacío en local; en Pages: /Prueba/
 ```
 
 `.env.local` **nunca** se sube al repositorio (está en `.gitignore`).
@@ -141,7 +141,7 @@ Esta sección responde a las dudas típicas antes de operar la app.
   datos de negocio**. Solo sirve los archivos y recarga en caliente al editar.
 - **Supabase (nube)**: es la única fuente de verdad. La base de datos Postgres,
   la autenticación y las Edge Functions viven en el proyecto
-  `vparxfmoqfaahsdqmjcf`. Cada lectura y escritura viaja por HTTPS a Supabase.
+  `dxutsrqmnyrydpdtghlw`. Cada lectura y escritura viaja por HTTPS a Supabase.
 
 ### ¿Hay memoria local / datos guardados en el navegador?
 
@@ -223,7 +223,7 @@ supabase/
 ## Despliegue en GitHub Pages
 
 GitHub Pages publica el build en
-`https://contactoedifbox-lgtm.github.io/inventarios/RCP_Veterinaria/`.
+`https://igneel2-hue.github.io/Prueba/`.
 La ruta pública de reservas es `#/reservar`.
 
 El workflow [`.github/workflows/deploy-nueva-app.yml`](../.github/workflows/deploy-nueva-app.yml)

@@ -147,8 +147,8 @@ supabase/
 
 | Parámetro | Valor |
 |-----------|-------|
-| Project ref | `vparxfmoqfaahsdqmjcf` |
-| URL | `https://vparxfmoqfaahsdqmjcf.supabase.co` |
+| Project ref | `dxutsrqmnyrydpdtghlw` |
+| URL | `https://dxutsrqmnyrydpdtghlw.supabase.co` |
 | Clave pública (publishable / anon) | `sb_publishable_kD6bulbCcinXkZZ9_4kM2Q_6OhBGMd7` |
 | Zona horaria de negocio | `America/Santiago` |
 
@@ -924,7 +924,7 @@ App: refresca ventas e inventario
 
 ```kotlin
 val supabase = createSupabaseClient(
-    supabaseUrl = "https://vparxfmoqfaahsdqmjcf.supabase.co",
+    supabaseUrl = "https://dxutsrqmnyrydpdtghlw.supabase.co",
     supabaseKey = "sb_publishable_kD6bulbCcinXkZZ9_4kM2Q_6OhBGMd7"
 ) {
     install(Auth) { /* PKCE, deep links */ }
@@ -1004,7 +1004,7 @@ de reserva: usar siempre las RPC.
 VITE_SUPABASE_URL=https://xxxxxxxxxxxx.supabase.co
 VITE_SUPABASE_ANON_KEY=sb_publishable_xxxxxxxxxxxxxxxxxxxx
 VITE_TURNSTILE_SITE_KEY=0x00000000000000000000000000000000
-VITE_BASE_PATH=/inventarios/RCP_Veterinaria/
+VITE_BASE_PATH=/Prueba/
 ```
 
 ### 13.2 Secretos de las Edge Functions (Supabase)

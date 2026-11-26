@@ -2,11 +2,11 @@
 
 Esta guía deja la aplicación publicada en:
 
-- App interna: `https://<usuario>.github.io/inventarios/RCP_Veterinaria/`
-- Reserva pública: `https://<usuario>.github.io/inventarios/RCP_Veterinaria/#/reservar`
+- App interna: `https://<usuario>.github.io/Prueba/`
+- Reserva pública: `https://<usuario>.github.io/Prueba/#/reservar`
 
 El esquema de base de datos ya está aplicado en el proyecto Supabase
-`vparxfmoqfaahsdqmjcf` y las Edge Functions ya están desplegadas. Lo que falta es
+`dxutsrqmnyrydpdtghlw` y las Edge Functions ya están desplegadas. Lo que falta es
 la configuración de GitHub y los secretos.
 
 ---
@@ -15,7 +15,7 @@ la configuración de GitHub y los secretos.
 
 - Repositorio `inventarios` en GitHub con la carpeta `RCP_Veterinaria/`.
 - Node 20+ para probar antes de publicar.
-- Proyecto Supabase `vparxfmoqfaahsdqmjcf`.
+- Proyecto Supabase `dxutsrqmnyrydpdtghlw`.
 - Cuenta de Cloudflare para Turnstile (gratuita).
 
 ---
@@ -24,7 +24,7 @@ la configuración de GitHub y los secretos.
 
 1. Entra a **Supabase → proyecto Arriendo_Trajes → Settings → API**.
 2. Anota:
-   - **Project URL**: `https://vparxfmoqfaahsdqmjcf.supabase.co`
+   - **Project URL**: `https://dxutsrqmnyrydpdtghlw.supabase.co`
    - **Publishable key**: `sb_publishable_kD6bulbCcinXkZZ9_4kM2Q_6OhBGMd7`
 3. No uses la clave `secret` en el frontend.
 
@@ -65,7 +65,7 @@ En el repositorio: **Settings → Secrets and variables → Actions → New repo
 
 | Secreto | Valor |
 |---|---|
-| `VITE_SUPABASE_URL` | `https://vparxfmoqfaahsdqmjcf.supabase.co` |
+| `VITE_SUPABASE_URL` | `https://dxutsrqmnyrydpdtghlw.supabase.co` |
 | `VITE_SUPABASE_ANON_KEY` | `sb_publishable_kD6bulbCcinXkZZ9_4kM2Q_6OhBGMd7` |
 | `VITE_TURNSTILE_SITE_KEY` | Site key de Turnstile |
 
@@ -111,8 +111,8 @@ git push origin main
 
 Luego revisa **Actions → Deploy (GitHub Pages)**. Cuando termine en verde:
 
-- App interna: `https://<usuario>.github.io/inventarios/RCP_Veterinaria/`
-- Reserva pública: `https://<usuario>.github.io/inventarios/RCP_Veterinaria/#/reservar`
+- App interna: `https://<usuario>.github.io/Prueba/`
+- Reserva pública: `https://<usuario>.github.io/Prueba/#/reservar`
 
 ---
 
@@ -159,7 +159,7 @@ values ('<uuid-del-usuario>', 'Nombre del Maestro', 'maestro', true);
 
 ```bash
 cd RCP_Veterinaria
-supabase link --project-ref vparxfmoqfaahsdqmjcf
+supabase link --project-ref dxutsrqmnyrydpdtghlw
 supabase db push
 supabase functions deploy reserva-publica --no-verify-jwt
 supabase functions deploy admin-usuarios
@@ -195,14 +195,14 @@ En **Supabase → Authentication → Sign In / Providers → Email**:
 1. En **Google Cloud Console** → *APIs & Services* → *Credentials* → **Create
    credentials → OAuth client ID** → tipo **Web application**.
 2. En **Authorized redirect URIs** agrega exactamente:
-   `https://vparxfmoqfaahsdqmjcf.supabase.co/auth/v1/callback`
+   `https://dxutsrqmnyrydpdtghlw.supabase.co/auth/v1/callback`
 3. Copia el **Client ID** y **Client Secret**.
 4. En **Supabase → Authentication → Sign In / Providers → Google**: actívalo y
    pega el Client ID y el Client Secret.
 5. En **Authentication → URL Configuration**:
-   - **Site URL**: `https://contactoedifbox-lgtm.github.io/inventarios/RCP_Veterinaria/`
+   - **Site URL**: `https://igneel2-hue.github.io/Prueba/`
    - **Redirect URLs**: agrega
-     `https://contactoedifbox-lgtm.github.io/inventarios/RCP_Veterinaria/` y
+     `https://igneel2-hue.github.io/Prueba/` y
      `http://localhost:5173/`.
 
 > El frontend usa PKCE (`flowType: 'pkce'`), por lo que el retorno de Google llega

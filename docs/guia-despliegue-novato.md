@@ -22,15 +22,15 @@ subirla.
 Al final, tu app quedará en esta dirección:
 
 ```
-https://contactoedifbox-lgtm.github.io/inventarios/RCP_Veterinaria/
+https://igneel2-hue.github.io/Prueba/
 ```
 
 ---
 
 ## Antes de empezar
 
-- Ten a mano tu **usuario de GitHub**: `contactoedifbox-lgtm`.
-- Abre el navegador en: `https://github.com/contactoedifbox-lgtm/inventarios`
+- Ten a mano tu **usuario de GitHub**: `igneel2-hue`.
+- Abre el navegador en: `https://github.com/igneel2-hue/Prueba`
 - No necesitas instalar nada.
 
 ---
@@ -40,7 +40,7 @@ https://contactoedifbox-lgtm.github.io/inventarios/RCP_Veterinaria/
 Este es el paso que falta. Lo haremos **desde la web de GitHub**, sin programas.
 
 1. Entra a:
-   `https://github.com/contactoedifbox-lgtm/inventarios/blob/main/.github/workflows/deploy-nueva-app.yml`
+   `https://github.com/igneel2-hue/Prueba/blob/main/.github/workflows/deploy-nueva-app.yml`
 2. Arriba a la derecha del recuadro del archivo, haz clic en el **ícono de lápiz**
    (✏️ "Edit this file").
 3. **Selecciona TODO el contenido** del recuadro (haz clic dentro y presiona
@@ -88,7 +88,7 @@ jobs:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
           VITE_TURNSTILE_SITE_KEY: ${{ secrets.VITE_TURNSTILE_SITE_KEY }}
-          VITE_BASE_PATH: /inventarios/RCP_Veterinaria/
+          VITE_BASE_PATH: /Prueba/
         run: npm run build
 
       - name: Generar nueva-app/config.js desde los secretos
@@ -160,13 +160,13 @@ La app necesita 3 datos para conectarse a la base de datos. Se guardan como
 "secretos" (nadie los ve, ni siquiera tú después de guardarlos).
 
 1. Ve a:
-   `https://github.com/contactoedifbox-lgtm/inventarios/settings/secrets/actions`
+   `https://github.com/igneel2-hue/Prueba/settings/secrets/actions`
 2. Haz clic en **"New repository secret"** (botón verde).
 3. Crea **uno por uno** estos tres secretos (Nombre exacto → Valor):
 
 | Nombre (Name) | Valor (Secret) |
 |---|---|
-| `VITE_SUPABASE_URL` | `https://vparxfmoqfaahsdqmjcf.supabase.co` |
+| `VITE_SUPABASE_URL` | `https://dxutsrqmnyrydpdtghlw.supabase.co` |
 | `VITE_SUPABASE_ANON_KEY` | `sb_publishable_kD6bulbCcinXkZZ9_4kM2Q_6OhBGMd7` |
 | `VITE_TURNSTILE_SITE_KEY` | *(déjalo vacío por ahora; se completa en el Paso 5)* |
 
@@ -180,7 +180,7 @@ Para cada uno: escribe el **Name**, pega el **Secret**, y haz clic en
 ## Paso 3 — Activar la publicación (GitHub Pages)
 
 1. Ve a:
-   `https://github.com/contactoedifbox-lgtm/inventarios/settings/pages`
+   `https://github.com/igneel2-hue/Prueba/settings/pages`
 2. En **"Build and deployment" → "Source"**, elige **"GitHub Actions"**.
    (No elijas "Deploy from a branch".)
 3. No hay botón de guardar; se guarda solo.
@@ -190,11 +190,11 @@ Para cada uno: escribe el **Name**, pega el **Secret**, y haz clic en
 ## Paso 4 — Ver que se publicó
 
 1. Ve a:
-   `https://github.com/contactoedifbox-lgtm/inventarios/actions`
+   `https://github.com/igneel2-hue/Prueba/actions`
 2. Verás una ejecución llamada **"Deploy (GitHub Pages)"** con un círculo
    **amarillo** (en curso). Espera 1–3 minutos.
 3. Cuando el círculo se ponga **verde** ✅, abre:
-   `https://contactoedifbox-lgtm.github.io/inventarios/RCP_Veterinaria/`
+   `https://igneel2-hue.github.io/Prueba/`
 4. Deberías ver la pantalla de **inicio de sesión** de LankaPets.
 
 > Si el círculo queda **rojo** ❌, entra a la ejecución, mira el paso que falló y
@@ -208,7 +208,7 @@ El correo integrado de Supabase sirve para probar, pero **rechaza correos de
 prueba** y limita a 2 por hora. Para uso real, conecta tu propio correo.
 
 1. Entra a tu proyecto Supabase:
-   `https://supabase.com/dashboard/project/vparxfmoqfaahsdqmjcf`
+   `https://supabase.com/dashboard/project/dxutsrqmnyrydpdtghlw`
 2. Menú izquierdo: **Authentication → Emails** (o **Project Settings → Auth**).
 3. Busca **"SMTP Settings"** y actívalo. Necesitas datos de un servicio de correo
    (por ejemplo **Resend**, **SendGrid** o **Gmail**). Ejemplo con Resend:
@@ -231,12 +231,12 @@ Solo si quieres que los clientes entren con su cuenta de Google.
 1. En **Google Cloud Console** (`https://console.cloud.google.com`) crea un
    **OAuth client ID** de tipo **Web application**.
 2. En **Authorized redirect URIs** agrega exactamente:
-   `https://vparxfmoqfaahsdqmjcf.supabase.co/auth/v1/callback`
+   `https://dxutsrqmnyrydpdtghlw.supabase.co/auth/v1/callback`
 3. Copia el **Client ID** y **Client Secret**.
 4. En **Supabase → Authentication → Sign In / Providers → Google**: actívalo y
    pega ambos valores.
 5. En **Authentication → URL Configuration**:
-   - **Site URL**: `https://contactoedifbox-lgtm.github.io/inventarios/RCP_Veterinaria/`
+   - **Site URL**: `https://igneel2-hue.github.io/Prueba/`
    - **Redirect URLs**: agrega esa misma URL y `http://localhost:5173/`.
 
 ---

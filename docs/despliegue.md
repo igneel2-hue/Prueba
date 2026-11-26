@@ -66,7 +66,7 @@ supabase secrets set TURNSTILE_SECRET_KEY=... IP_SALT=...
 El workflow [`.github/workflows/deploy-nueva-app.yml`](../../.github/workflows/deploy-nueva-app.yml):
 
 1. Instala dependencias de `RCP_Veterinaria`.
-2. Compila con `VITE_BASE_PATH=/inventarios/RCP_Veterinaria/`.
+2. Compila con `VITE_BASE_PATH=/Prueba/`.
 3. Genera `nueva-app/config.js` desde secretos.
 4. Ensambla un directorio `staging/` (sin `node_modules`, `src`, `supabase`, `dist`).
 5. Copia `RCP_Veterinaria/dist` a `staging/RCP_Veterinaria/`.
@@ -74,8 +74,8 @@ El workflow [`.github/workflows/deploy-nueva-app.yml`](../../.github/workflows/d
 
 URLs resultantes:
 
-- App interna: `https://<usuario>.github.io/inventarios/RCP_Veterinaria/`
-- Reserva publica: `https://<usuario>.github.io/inventarios/RCP_Veterinaria/#/reservar`
+- App interna: `https://<usuario>.github.io/Prueba/`
+- Reserva publica: `https://<usuario>.github.io/Prueba/#/reservar`
 
 En **Settings → Pages → Source** seleccionar **GitHub Actions**.
 

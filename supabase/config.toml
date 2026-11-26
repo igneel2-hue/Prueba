@@ -1,6 +1,6 @@
 # Configuracion de Supabase CLI para LankaPets v2.0
 # Uso: supabase link --project-ref <ref-dev> y supabase db push
-project_id = "vparxfmoqfaahsdqmjcf"
+project_id = "dxutsrqmnyrydpdtghlw"
 
 [api]
 enabled = true
@@ -19,7 +19,7 @@ port = 54323
 
 [auth]
 enabled = true
-site_url = "https://<usuario>.github.io/inventarios/RCP_Veterinaria/"
+site_url = "https://igneel2-hue.github.io/Prueba/"
 additional_redirect_urls = ["http://localhost:5173"]
 
 [auth.email]
